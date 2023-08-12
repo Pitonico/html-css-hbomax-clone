@@ -1,0 +1,337 @@
+@import url(global.css);
+
+.header {
+    padding-top: 150px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: bg-header-move 8s ease-in-out infinite alternate;
+}
+
+.header__btn {
+    background-size: 260%;
+    animation-name: btn-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header__content::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+
+.header__content h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.header__content h1 span {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.header__content p {
+    text-align: center;
+}
+
+.split-bar {
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+
+.offer {
+    font-size: 1.25rem;
+}
+
+.offer__price {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.offer__price--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.header__channels ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__channels img {
+    margin: 0 12px;
+}
+
+.subscribe__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+}
+
+.subscribe__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 2600px;
+    gap: 80px;
+}
+
+.subscribe__card {
+    background-image: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 536px;
+    height: 600px;
+    padding: 40px 60px;
+    border-radius: 8px;
+    transition: 1s ease-in;
+}
+
+.subscribe__content:has(.subscribe__card:nth-child(1):hover) .subscribe__card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.subscribe__content:has(.subscribe__card:nth-child(2):hover) .subscribe__card:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+.subscribe__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.subscribe__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.subscribe__details {
+    font-size: 1.25rem;
+}
+
+.subscribe__details li::before {
+    content: "+";
+    padding-right: 10px;
+}
+
+.subscribe__details li {
+    margin-bottom: 14px;
+}
+
+.subscribe__btn {
+    background-size: 450%;
+}
+
+.subscribe__btn:hover, .form__btn:hover {
+    transform: scale(1.05);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.content__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.card {
+    transition: 1s ease-in;
+}
+
+.card img {
+   width: 100%;
+   transition: 2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card:hover img{
+    opacity: 0;
+}
+
+.card.img01:hover {
+    background-image: url("../images/hbo-hover_0.webp"); 
+}
+
+.card.img02:hover {
+    background-image: url("../images/MAX-Hover.webp");
+} 
+
+.card.img03:hover {
+    background-image: url("../images/DC-Hover.webp");
+} 
+
+.card.img04:hover {
+    background-image: url("../images/WB-Hover.webp");
+} 
+
+.card.img05:hover {
+    background-image: url("../images/CN-Hover.png");
+} 
+
+.card.img06:hover {
+    background-image: url("../images/UCL-Hover.webp");
+} 
+
+.bg-image {
+    background-image: url(../images/background-movies-series.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form {
+    max-width: 800px;
+    margin: 40px auto 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 45px;
+    background-color: var(--form-bg-color);
+}
+
+.form h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+}
+
+.form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form__fields input{
+    background: var(--form-field-bg-color);
+    color: var(--text-color);
+    border: var(--form-field-border);
+    outline: none;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.form__fields span {
+    display: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: 10px;
+ }
+
+.form__fields input::placeholder {
+    font-size: 1.05rem;
+    color: var(--form-field-placeholder);
+}
+
+.form__fields input:invalid {
+    border: 2px solid var(--form-field-error);
+}
+
+.form__fields input:invalid + span {
+    display: block;
+ }
+
+.form__btn {
+    background-size: 500%;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.action a {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+
+
+@keyframes bg-header-move {
+    from { background-position: 0%; }
+    50% { background-position: 50%; }
+    to { background-position: 100%; }
+}
+
+@keyframes btn-move {
+    0%, 10%, 20%, 30% { transform: rotateZ(10deg); }
+    5%, 15%, 25%, 35% { transform: rotateZ(-10deg);}
+    40%, 100% { transform: rotateZ(0deg); }
+}
+
+@media screen and (max-width: 1200px) {
+    .content__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .content__cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .menu {
+      justify-content: center;
+    }
+
+    .action {
+        justify-content: center;
+    }
+  }
